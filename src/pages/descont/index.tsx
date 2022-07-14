@@ -1,13 +1,14 @@
 import type { NextPage } from 'next'
-import { MyCart } from '../components/MyCart'
-import product from '../api/abaixo-10.json'
-import { ICart } from '../dto/ICart'
+import { MyCart } from '../../components/MyCart'
+import { ICart } from '../../dto/ICart'
+import product from '../../api/acima-10.json'
+
 
 const Home: NextPage = () => {
   const cart: ICart = product as any
   return (
     <>
-
+      
       <MyCart cart={cart} />
     </>
   )

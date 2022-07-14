@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
+import Link from "next/link";
 import { ICart } from "../../dto/ICart";
 import { Container } from "./styled";
 
@@ -10,6 +11,12 @@ interface IMyCart {
 export function MyCart({ cart }: IMyCart) {
     return (
         <Container>
+            <header>
+                <nav>
+                    <Link href="/">Pagina sem Desconto</Link>
+                    <Link href="/descont">Pagina com Desconto</Link>
+                </nav>
+            </header>
             <div className="container">
                 <header>Meu carrinho</header>
                 <main>
@@ -22,7 +29,7 @@ export function MyCart({ cart }: IMyCart) {
                                     </main>
 
                                     <div>
-                                        <h3>{item.name}</h3>
+                                        <h3>{item.quantity} X {item.name}</h3>
 
                                         <span>
                                             <small>R$ {new Intl.NumberFormat().format(item.price / 100)}</small>
@@ -59,6 +66,8 @@ export function MyCart({ cart }: IMyCart) {
                                         </>
                                     )
                                 }
+
+
                             })
                         }
 

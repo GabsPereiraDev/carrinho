@@ -9,6 +9,26 @@ export const Container = styled.div`
     justify-content:center;
     padding:2rem;
 
+    header{
+        width:95%;
+        max-width: 800px;
+        padding: 0 1.5rem;
+        a{  
+            display: inline-flex;
+            background-color:#0686e1;
+            margin-right:.25rem;
+            padding:.75rem 1rem;
+            color: #fff;
+            font-weight: bold;
+            text-decoration: none;
+            border-top-left-radius: 1rem;
+            border-top-right-radius: 1rem;
+            &:hover{
+                filter:brightness(0.8)
+                }
+        }
+    }
+
     .container{
         box-shadow: 5px 5px 15px #c9c9c9;
         width:95%;
@@ -34,8 +54,6 @@ export const Container = styled.div`
                 padding:0 2rem;
                 width: 100%;
                 border-bottom:1px solid #c9c9c9;
-                height: 450px;
-                overflow-y: auto;
                 li{
                     display:flex;
                     align-items: start;
